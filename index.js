@@ -35,19 +35,21 @@ client.on("message", message => {
 
 client.on ("ready", () => {
 let activities = [
-  `Love Live!`,
-  `K-On!!`
+  `p?comandos`,
+  `Fate Grand Order`,
+  `Persona 5 Royal`,
+  `Xenoblade Chronicles 2`,
+  `Fire Emblem Heroes`,
+  `Genshin Impact`
 ],
 i = 0;
 setInterval(() => client.user.setActivity(`${activities[i ++ % activities.length]}`, {
- type: "WATCHING"
+ type: "PLAYING"
 }), 1000 * 60 * 10); //WATCHING, LISTENING, PLAYING, STREAMING
  client.user
   .setStatus("idle") //idle, dnd, online, invisible
   .catch(console.log);
-console.log("Estou Online mestre! ^^")
+console.log("Estou Online!")
 });
 
 client.login(process.env.TOKEN); //Ligando o Bot caso ele consiga acessar o TOKEN
-
-
